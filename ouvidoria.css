@@ -472,6 +472,10 @@ header{
         width: 20rem;
     }
 
+    .upload label #upload{
+        width: 4rem;
+    }
+
     .content-texts h1{
         font-size: 2rem;
     }
@@ -487,7 +491,7 @@ header{
     .upload label h3,
     .upload label h4,
     .upload label p{
-        font-size: 0.5rem;
+        display: none;
     }
 }
 
@@ -590,6 +594,10 @@ header{
 @media screen and (max-width: 361px) and (orientation: portrait){
     .dados-demanda select{
         width: 10rem;
+    }
+    
+    .content-texts h1{
+        font-size: 2rem;
     }
 
     .upload label{
