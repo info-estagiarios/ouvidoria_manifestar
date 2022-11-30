@@ -9,14 +9,19 @@
 
 header{
     width: 100%;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 1rem;
 }
+
 
 /*---- Aqui começa a estilização do HAMBURGUER MENU ----*/
 
 .hamburger-menu{
-    margin-top: 1rem;
-    margin-left: 1rem;
+    width: 50%;
+    display: none;
 }
 
 #menu__toogle{
@@ -118,6 +123,17 @@ header{
 }
 
 /*---- Aqui termina a estilização do HAMBURGUER MENU ----*/
+
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    width: 14rem;
+    margin-top: 2rem;
+}
 
 .container{
     width: 100%;
@@ -354,7 +370,11 @@ header{
         flex-direction: column;
     }
 
-    header{
+    .hamburger-menu{
+        display: block;
+    }
+
+    .horario{
         display: block;
     }
 
@@ -418,6 +438,11 @@ header{
         width: 2rem;
     }
 
+    .upload label #preview-image{
+        width: 15rem;
+        height: 7rem;
+    }
+
     .upload label h3,
     .upload label h4{
         font-size: 0.5rem;
@@ -442,9 +467,14 @@ header{
 
 @media screen and (max-width: 480px) and (orientation: portrait){
     .content{
-        margin-top: 3rem;
+        margin-top: 9rem;
         margin-left: 5rem;
     }
+
+    .content-texts{
+        margin-right: 8rem;
+    }
+
     .dados-demanda{
         width: 100%;
         display: flex;
@@ -458,6 +488,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
     }
 
     .dados-demanda input[type="text"]{
@@ -465,33 +496,38 @@ header{
     }
 
     .dados-demanda select{
-        width: 8.5rem;
+        width: 8rem;
     }
 
     .upload label{
         width: 20rem;
     }
 
-    .upload label #upload{
-        width: 4rem;
-    }
-
     .content-texts h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .content-texts p{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 
     .content-texts h2{
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+
+    .upload label #upload{
+        width: 2rem;
     }
 
     .upload label h3,
     .upload label h4,
     .upload label p{
-        display: none;
+        font-size: 0.65rem;
+    }
+
+    .upload label #preview-image{
+        width: 10rem;
+        height: 8rem;
     }
 }
 
@@ -536,15 +572,15 @@ header{
     }
 
     .content-texts h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .content-texts p{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 
     .content-texts h2{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -554,24 +590,19 @@ header{
     }
 
     .content-texts h1{
-        font-size: 1.4rem;
+        font-size: 2.5rem;
     }
 
     .content-texts p{
-        font-size: 0.65rem;
+        font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 376px) and (orientation: portrait){
-    .content-texts h1,
-    .content-texts h2{
-        font-size: 1rem;
-    }
-
-    .content-texts p{
-        font-size: 0.6rem;
-    }
-
     .dados-demanda select{
         width: 5.2rem;
     }
@@ -610,16 +641,12 @@ header{
 }
 
 @media screen and (max-width: 321px) and (orientation: portrait){
-    .content-texts h1{
-        font-size: 0.9rem;
-    }
-    
     .content-texts h2{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     
     .content-texts p{
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 
     .dados-demanda select{
@@ -628,5 +655,10 @@ header{
 
     .upload label{
         width: 30rem;
+    }
+
+    .upload label #preview-image{
+        width: 6rem;
+        height: 6rem;
     }
 }
