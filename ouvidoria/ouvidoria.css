@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+header{
+    width: 100%;
+    display: none;
+}
+
+/*---- Aqui começa a estilização do HAMBURGUER MENU ----*/
+
+.hamburger-menu{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#menu__toogle{
+    opacity: 0;
+}
+
+#menu__toogle:checked + .menu__btn > span{
+    transform: rotate(45deg);
+}
+
+#menu__toogle:checked + .menu__btn  > span::before{
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toogle:checked + .menu__btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toogle:checked ~ .menu__box{
+    left: 0 !important;
+}
+
+.menu__btn{
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after{
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 2px;
+    background-color: #0a1952;
+    transition-duration: .25s;
+    z-index: 1;
+}
+
+.menu__btn > span::before{
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after{
+    content: '';
+    top: 8px;
+}
+
+.menu__box{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item{
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    font-size: 1.5rem;
+}
+
+.menu__item:hover{
+    background-color: #cfd8dc;
+}
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 1.5rem;
+}
+
+.icon__menu{
+    width: 1.75rem;
+}
+
+.menu__btn{
+    margin-top: 1rem;
+}
+
+/*---- Aqui termina a estilização do HAMBURGUER MENU ----*/
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.user-menu{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.user,
+.actions-user{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user{
+    gap: 0.75rem;
+}
+
+.user img{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+}
+
+.user h1{
+    font-size: 1.25rem;
+    color: #002E5B;
+}
+
+.actions-user ul{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 0.75rem;
+}
+
+.actions-user li a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #002E5B;
+}
+
+.actions-user li img{
+    width: 1.5rem;
+}
+
+.actions-user ul li{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.content{
+    width: 65%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+    margin-right: 4rem;
+    padding: 6rem;
+    gap: 2rem;
+}
+
+.page-dados,
+.content-texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-texts{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-dados{
+    gap: 0.5rem;
+}
+
+.content-texts h1{
+    font-size: 1.75rem;
+    color: #002E5B;
+    font-weight: 500;
+}
+
+.content-texts p{
+    font-size: 0.75rem;
+    color: #B1B1B1;
+}
+
+.content-texts span{
+    color: #FF0000;
+}
+
+.content-texts h2{
+    font-size: 1rem;
+    color: #002E5B;
+    font-weight: 500;
+}
+
+.dados-demanda{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dados-demanda input[type="text"]{
+    width: 24.4375rem;
+    height: 2.9375rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    color: #B1B1B1;
+}
+
+.dados-demanda input[type="text"]::placeholder{
+    color: #B1B1B1;
+}
+
+.dados-demanda select{
+    width: 14.375rem;
+    height: 2.9375rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    color: #B1B1B1;
+    padding: 15px;
+}
+
+.upload{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.upload input[type="file"]{
+    display: none;
+}
+
+.upload label{
+    width: 50Rem;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: dashed 2px #B1B1B1;
+    border-radius: 8px;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+#preview-image{
+    width: 30rem;
+    height: 12rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.upload label h3{
+    font-size: 1rem;
+    color: #4A72FF;
+}
+
+.upload label p{
+    font-size: 0.75rem;
+    color: #B1B1B1;
+}
+
+.upload label h4{
+    background-image: -webkit-linear-gradient(92deg, #4A72FF 2.09%, #03FFA4 97.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.upload textarea{
+    width: 50rem;
+    height: 9rem;
+    border: solid 2px #B1B1B1;
+    border-radius: 8px;
+    padding: 15px;
+    resize: none;
+}
+
+.enviar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enviar input[type="submit"]{
+    width: 11rem;
+    height: 3rem;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #4A72FF, #03FFA4);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/*---- Aqui começa a RESPONDSIVIDADE DO SITE ----*/
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header{
+        display: block;
+    }
+
+    .user-menu{
+        display: none;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-texts h1{
+        font-size: 1.5rem;
+    }
+
+    .content-texts p{
+        font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        font-size: 1rem;
+    }
+
+    .dados-demanda{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .dados-demanda input[type="text"]{
+        width: 20rem;
+        font-size: 0.5rem;
+    }
+
+    .dados-demanda select{
+        width: 9rem;
+        height: 2.5rem;
+        font-size: 0.5rem;
+    }
+
+    .upload label{
+        width: 20rem;
+        height: 8rem;
+    }
+
+    .upload label{
+        display: flex;
+        gap: 0;
+    }
+
+    .upload label img{
+        width: 2rem;
+    }
+
+    .upload label h3,
+    .upload label h4{
+        font-size: 0.5rem;
+    }
+
+    .upload label p{
+        font-size: 0.5rem;
+    }
+
+    .upload textarea{
+        font-size: 0.65rem;
+    }
+
+    .content{
+        box-shadow: 0 0 0;
+    }
+        
+    #preview-image{
+        width: 16rem;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait){
+    .content{
+        margin-top: 3rem;
+        margin-left: 5rem;
+    }
+    .dados-demanda{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+    .content,
+    .page-dados{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dados-demanda input[type="text"]{
+        width: 18rem;
+    }
+
+    .dados-demanda select{
+        width: 8.5rem;
+    }
+
+    .upload label{
+        width: 20rem;
+    }
+
+    .content-texts h1{
+        font-size: 2rem;
+    }
+
+    .content-texts p{
+        font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        font-size: 1.5rem;
+    }
+
+    .upload label h3,
+    .upload label h4,
+    .upload label p{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 426px) and (orientation: portrait){
+    .page-dados{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .dados-demanda select{
+        width: 6rem;
+    }
+
+    .upload label{
+        width: 6.5rem;
+    }
+
+    .upload label{
+        width: 30rem;
+    }
+
+    #preview-image{
+        width: 8rem;
+    }
+
+    .upload label h3,
+    .upload label h4,
+    .upload label p{
+        font-size: 0.4rem;
+    }
+
+    .upload textarea{
+        height: 7rem;
+        font-size: 0.5rem;
+    }
+
+    .enviar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-texts h1{
+        font-size: 1.5rem;
+    }
+
+    .content-texts p{
+        font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 394px) and (orientation: portrait){
+    .dados-demanda select{
+        width: 12rem;
+    }
+
+    .content-texts h1{
+        font-size: 1.4rem;
+    }
+
+    .content-texts p{
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 376px) and (orientation: portrait){
+    .content-texts h1,
+    .content-texts h2{
+        font-size: 1rem;
+    }
+
+    .content-texts p{
+        font-size: 0.6rem;
+    }
+
+    .dados-demanda select{
+        width: 5.2rem;
+    }
+
+    .upload label{
+        width: 25rem;
+    }
+
+    .upload label h3,
+    .upload label p,
+    .upload label h4{
+        display: none;
+    }
+
+    .content{
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (max-width: 361px) and (orientation: portrait){
+    .dados-demanda select{
+        width: 10rem;
+    }
+
+    .upload label{
+        height: 7rem;
+    }
+
+    .upload #preview-image{
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 321px) and (orientation: portrait){
+    .content-texts h1{
+        font-size: 0.9rem;
+    }
+    
+    .content-texts h2{
+        font-size: 0.7rem;
+    }
+    
+    .content-texts p{
+        font-size: 0.4rem;
+    }
+
+    .dados-demanda select{
+        width: 11rem;
+    }
+
+    .upload label{
+        width: 30rem;
+    }
+}
