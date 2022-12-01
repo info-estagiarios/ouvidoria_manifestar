@@ -463,8 +463,6 @@ header{
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait){
-
-
     .dados-demanda input[type="text"]{
         width: 30rem;
     }
@@ -644,5 +642,11 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-height: 220px) and (max-width: 915px){
+    .content{
+        margin-top: 40rem;
     }
 }
