@@ -167,6 +167,12 @@ header{
     color: #002E5B;
 }
 
+.content-texts h1 span{
+    background-image: -webkit-linear-gradient(45deg, #4A72FF, #03FFA4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .actions-user ul{
     display: flex;
     flex-direction: column;
@@ -396,12 +402,6 @@ header{
         font-size: 4rem;
     }
 
-    .content-texts h1 span{
-        background-image: -webkit-linear-gradient(45deg, #4A72FF, #03FFA4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
     .content-texts p{
         font-size: 1.5rem;
     }
@@ -412,6 +412,52 @@ header{
 
     .dados-demanda input[type="text"]{
         width: 40rem;
+    }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape){
+    header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .logo img{
+        width: 14rem;
+    }
+
+    .user-menu{
+        display: none;
+    }
+
+    .content-texts h1{
+        font-size: 3.5rem;
+    }
+
+    .content-texts p{
+        font-size: 1rem;
+    }
+
+    .content-texts h2{
+        font-size: 1.25rem;
+    }
+
+    .content{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0;
+        margin-top: 25rem;
+    }
+
+    .dados-demanda input[type="text"]{
+        width: 19rem;
     }
 }
 
