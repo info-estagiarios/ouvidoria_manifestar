@@ -400,6 +400,7 @@ header{
 
     .content-texts h1{
         font-size: 4rem;
+        line-height: 3rem;
     }
 
     .content-texts p{
@@ -415,7 +416,7 @@ header{
     }
 }
 
-@media screen and (max-width: 896px) and (orientation: landscape){
+@media screen and (max-width: 1024px) and (orientation: landscape){
     header{
         width: 100%;
         display: flex;
@@ -466,6 +467,36 @@ header{
 
     .dados-demanda input[type="text"]{
         width: 30rem;
+    }
+}
+
+@media screen and (max-width: 740px) and (orientation: landscape){
+    .dados-demanda input[type="text"]{
+        width: 15.5rem;
+    }
+}
+
+@media screen and (max-width: 670px) and (orientation: landscape){
+    .content{
+        margin-top: 30rem;
+    }
+
+    .content-texts h1{
+        line-height: 3rem;
+    }
+    .dados-demanda{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dados-demanda input[type="text"]{
+        width: 30rem;
+    }
+
+    .dados-demanda select{
+        width: 12rem;
     }
 }
 
@@ -540,6 +571,17 @@ header{
     .dados-demanda select{
         width: 20rem;
     }
+
+    .enviar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload #preview-image{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 410px) and (orientation: portrait){
@@ -560,6 +602,14 @@ header{
     .upload label #text3,
     .upload textarea{
         font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        line-height: 1rem;
+    }
+
+    .dados-demanda select{
+        width: 20rem;
     }
 }
 
