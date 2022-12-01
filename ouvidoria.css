@@ -351,7 +351,7 @@ header{
 
 /*---- Aqui começa a RESPONDSIVIDADE DO SITE ----*/
 
-@media screen and (max-width: 768px) and (orientation: portrait){
+@media screen and (max-width: 912px) and (orientation: portrait){
     header{
     display: flex;
     align-items: center;
@@ -377,7 +377,7 @@ header{
     .content{
         width: 90%;
         margin-left: 4rem;
-        margin-top: -2rem;
+        margin-top: -14rem;
         box-shadow: 0 0 0;
     }
 
@@ -411,7 +411,42 @@ header{
     }
 
     .dados-demanda input[type="text"]{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+
+
+    .dados-demanda input[type="text"]{
         width: 30rem;
+    }
+}
+
+@media screen and (max-width: 540px) and (orientation: portrait){
+    .content{
+        margin-top: 25rem;
+    }
+
+    .content-texts{
+        margin-left: -4rem;
+    }
+
+    .content-texts h1{
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+
+    .content-texts p{
+        font-size: 0.75rem;
+    }
+
+    .content-texts h2{
+        font-size: 2.25rem;
+    }
+
+    .dados-demanda select{
+        width: 20rem;
     }
 }
 
@@ -445,7 +480,6 @@ header{
 
     .content-texts h1{
         font-size: 3.5rem;
-        line-height: 3rem;
     }
 
     .content-texts p{
@@ -482,7 +516,7 @@ header{
     }
 }
 
-@media screen and (max-height: 395px) and (max-width: 480px){
+@media screen and (max-height: 430px) and (max-width: 480px){
     .user-menu{
         display: none;
     }
