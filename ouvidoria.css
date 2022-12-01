@@ -461,7 +461,7 @@ header{
     }
 }
 
-@media screen and (max-width: 395px) and (orientation: portrait){
+@media screen and (max-width: 410px) and (orientation: portrait){
     .content{
         margin-top: 15rem;
     }
