@@ -616,6 +616,14 @@ header{
         display: none;
     }
 
+    .content{
+        margin-top: 12rem;
+    }
+
+    .content-texts{
+        margin-left: -9rem;
+    }
+
     .content,
     .page-dados,
     .dados-demanda{
@@ -627,10 +635,6 @@ header{
 
     .dados-demanda select{
         width: 15rem;
-    }
-
-    .content-texts{
-        display: none;
     }
 
     .upload{
@@ -645,7 +649,22 @@ header{
     }
 }
 
-@media screen and (max-height: 220px) and (max-width: 915px){
+@media screen and (max-height: 300px) and (max-width: 480px){
+    .content-texts h1{
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+
+    .content-texts p{
+        font-size: 0.5rem;
+    }
+
+    .content{
+        margin-top: 15rem;
+    }
+}
+
+@media screen and (max-height: 168px) and (max-width: 915px){
     .content{
         margin-top: 40rem;
     }
