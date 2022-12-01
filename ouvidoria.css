@@ -10,6 +10,7 @@
 body{
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 header{
@@ -17,13 +18,10 @@ header{
     display: none;
 }
 
-
 /*---- Aqui começa a estilização do HAMBURGUER MENU ----*/
 
 .hamburger-menu{
-    width: 50%;
-    display: none;
-    margin-top: 3rem;
+    margin-top: -1rem;
 }
 
 #menu__toogle{
@@ -125,17 +123,6 @@ header{
 }
 
 /*---- Aqui termina a estilização do HAMBURGUER MENU ----*/
-
-.logo{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.logo img{
-    width: 14rem;
-    margin-top: 5rem;
-}
 
 .container{
     width: 100%;
@@ -365,331 +352,135 @@ header{
 /*---- Aqui começa a RESPONDSIVIDADE DO SITE ----*/
 
 @media screen and (max-width: 768px) and (orientation: portrait){
-    body{
+    header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-    }
-
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        gap: 28rem;
-    }
-
-    .hamburger-menu{
-        display: block;
     }
 
     .user-menu{
         display: none;
     }
 
-    .container{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .content{
+        width: 90%;
+        margin-left: 4rem;
+        margin-top: -2rem;
+        box-shadow: 0 0 0;
     }
 
-    .content{
+    .page-dados{
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .content-texts{
+        display: flex;
+        gap: 1rem;
     }
 
     .content-texts h1{
-        font-size: 1.5rem;
+        font-size: 4rem;
+    }
+
+    .content-texts h1 span{
+        background-image: -webkit-linear-gradient(45deg, #4A72FF, #03FFA4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .content-texts p{
-        font-size: 0.75rem;
+        font-size: 1.5rem;
     }
 
     .content-texts h2{
-        font-size: 1rem;
-    }
-
-    .dados-demanda{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        font-size: 3rem;
     }
 
     .dados-demanda input[type="text"]{
-        width: 20rem;
-        font-size: 0.5rem;
-    }
-
-    .dados-demanda select{
-        width: 9rem;
-        height: 2.5rem;
-        font-size: 0.5rem;
-    }
-
-    .upload label{
-        width: 20rem;
-        height: 8rem;
-    }
-
-    .upload label{
-        display: flex;
-        gap: 0;
-    }
-
-    .upload label img{
-        width: 2rem;
-    }
-
-    .upload label #preview-image{
-        width: 15rem;
-        height: 7rem;
-    }
-
-    .upload label h3,
-    .upload label h4{
-        font-size: 0.5rem;
-    }
-
-    .upload label p{
-        font-size: 0.5rem;
-    }
-
-    .upload textarea{
-        font-size: 0.65rem;
-    }
-
-    .content{
-        box-shadow: 0 0 0;
-    }
-        
-    #preview-image{
-        width: 16rem;
+        width: 30rem;
     }
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait){
     header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 13rem;
-    }
-
-    .content{
-        margin-top: 9rem;
-        margin-left: 5rem;
-    }
-
-    .content-texts{
-        margin-right: 8rem;
-    }
-
-    .enviar{
-        width: 100%;
         display: flex;
-        justify-content: center;
-    }
-
-    .dados-demanda{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-    }
-    .content,
-    .page-dados{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .dados-demanda input[type="text"]{
-        width: 18rem;
-    }
-
-    .dados-demanda select{
-        width: 8rem;
-    }
-
-    .upload label{
-        width: 20rem;
-    }
-
-    .content-texts h1{
-        font-size: 2.5rem;
-    }
-
-    .content-texts p{
-        font-size: 0.85rem;
-    }
-
-    .content-texts h2{
-        font-size: 1.75rem;
-    }
-
-    .upload label #upload{
-        width: 2rem;
-    }
-
-    .upload label h3,
-    .upload label h4,
-    .upload label p{
-        font-size: 0.65rem;
-    }
-
-    .upload label #preview-image{
-        width: 10rem;
-        height: 8rem;
-    }
-}
-
-@media screen and (max-width: 426px) and (orientation: portrait){
-    .page-dados{
-        display: flex;
-        gap: 2rem;
-    }
-    
-    .dados-demanda select{
-        width: 6rem;
-    }
-
-    .upload label{
-        width: 6.5rem;
-    }
-
-    .upload label{
-        width: 30rem;
-    }
-
-    #preview-image{
-        width: 8rem;
-    }
-
-    .upload label h3,
-    .upload label h4,
-    .upload label p{
-        font-size: 0.4rem;
-    }
-
-    .upload textarea{
-        height: 7rem;
-        font-size: 0.5rem;
-    }
-
-    .enviar{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .content-texts h1{
-        font-size: 2rem;
-    }
-
-    .content-texts p{
-        font-size: 0.85rem;
-    }
-
-    .content-texts h2{
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 394px) and (orientation: portrait){
-    .dados-demanda select{
-        width: 12rem;
-    }
-
-    .content-texts h1{
-        font-size: 2.5rem;
-    }
-
-    .content-texts p{
-        font-size: 0.75rem;
-    }
-
-    .content-texts h2{
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 376px) and (orientation: portrait){
-    .dados-demanda select{
-        width: 5.2rem;
-    }
-
-    .upload label{
-        width: 25rem;
-    }
-
-    .upload label h3,
-    .upload label p,
-    .upload label h4{
-        display: none;
-    }
-
-    .content{
-        margin-top: 9rem;
-    }
-}
-
-@media screen and (max-width: 361px) and (orientation: portrait){
-    .dados-demanda select{
-        width: 10rem;
-    }
-    
-    .content-texts h1{
-        font-size: 2rem;
-    }
-
-    .upload label{
-        height: 7rem;
-    }
-
-    .upload #preview-image{
-        width: 10rem;
-    }
-}
-
-@media screen and (max-width: 321px) and (orientation: portrait){
-    header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 6rem;
+        padding-left: 0;
+        padding-right: 1.5rem;
     }
 
     .logo img{
-        width: 11rem;
+        width: 16rem;
     }
+
+    .content{
+        margin-top: 13rem;
+    }
+
+    .content-texts{
+        margin-left: -4rem;
+    }
+
+    .content,
+    .page-dados{
+        width: 100%;
+    }
+
+    .content-texts{
+        width: 100%;
+    }
+
+    .content-texts h1{
+        font-size: 3.5rem;
+    }
+
+    .content-texts p{
+        font-size: 0.77rem;
+    }
+
     .content-texts h2{
-        font-size: 0.8rem;
+        font-size: 2rem;
     }
-    
+
+    .dados-demanda select{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 395px) and (orientation: portrait){
+    .content{
+        margin-top: 15rem;
+    }
+
+    .content-texts h1{
+        line-height: 3rem;
+    }
+
     .content-texts p{
         font-size: 0.6rem;
     }
 
-    .dados-demanda select{
-        width: 11rem;
+    .content-texts h2{
+        font-size: 1.25rem;
     }
 
-    .upload label{
-        width: 30rem;
-    }
-
-    .upload label #preview-image{
-        width: 6rem;
-        height: 6rem;
+    .upload label #text1,
+    .upload label #text2,
+    .upload label #text3,
+    .upload textarea{
+        font-size: 0.75rem;
     }
 }
