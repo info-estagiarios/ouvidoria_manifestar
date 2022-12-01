@@ -482,7 +482,7 @@ header{
     }
 }
 
-@media screen and (max-height: 375px) and (max-width: 480px){
+@media screen and (max-height: 395px) and (max-width: 480px){
     .user-menu{
         display: none;
     }
