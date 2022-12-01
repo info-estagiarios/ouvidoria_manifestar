@@ -484,3 +484,30 @@ header{
         font-size: 0.75rem;
     }
 }
+
+@media screen and (max-height: 375px) and (max-width: 480px){
+    .user-menu{
+        display: none;
+    }
+
+    .content,
+    .page-dados,
+    .dados-demanda{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dados-demanda select{
+        width: 15rem;
+    }
+
+    .content-texts{
+        display: none;
+    }
+
+    .upload{
+        display: none;
+    }
+}
