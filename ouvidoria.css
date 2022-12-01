@@ -445,6 +445,7 @@ header{
 
     .content-texts h1{
         font-size: 3.5rem;
+        line-height: 3rem;
     }
 
     .content-texts p{
@@ -463,10 +464,6 @@ header{
 @media screen and (max-width: 395px) and (orientation: portrait){
     .content{
         margin-top: 15rem;
-    }
-
-    .content-texts h1{
-        line-height: 3rem;
     }
 
     .content-texts p{
