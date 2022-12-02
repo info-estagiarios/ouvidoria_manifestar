@@ -602,7 +602,7 @@ header{
     }
 }
 
-@media screen and (max-width: 412px) and (orientation: portrait){
+@media screen and (max-width: 426px) and (orientation: portrait){
     .content{
         margin-top: 15rem;
     }
