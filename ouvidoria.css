@@ -466,11 +466,31 @@ header{
     .dados-demanda input[type="text"]{
         width: 30rem;
     }
+
+    .content{
+        margin-top: -2rem;
+    }
 }
 
 @media screen and (max-width: 740px) and (orientation: landscape){
     .dados-demanda input[type="text"]{
         width: 15.5rem;
+    }
+}
+
+@media screen and (max-width: 725px) and (orientation: portrait){
+    .content{
+        margin-top: 1rem;
+    }
+
+    .dados-demanda{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dados-demanda select{
+        width: 12rem;
     }
 }
 
@@ -582,7 +602,7 @@ header{
     }
 }
 
-@media screen and (max-width: 410px) and (orientation: portrait){
+@media screen and (max-width: 412px) and (orientation: portrait){
     .content{
         margin-top: 15rem;
     }
@@ -608,6 +628,26 @@ header{
 
     .dados-demanda select{
         width: 20rem;
+    }
+}
+
+@media screen and (max-width: 361px) and (orientation: portrait){
+    .dados-demanda select{
+        width: 25rem;
+    }
+
+    .upload label{
+        height: 10rem;
+    }
+
+    .upload label #text1,
+    .upload label #text2,
+    .upload label #text3{
+        font-size: 0.5rem;
+    }
+
+    .upload textarea{
+        font-size: 0.5rem;
     }
 }
 
